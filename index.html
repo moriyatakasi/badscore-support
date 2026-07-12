@@ -36,6 +36,11 @@
   th { width: 9em; font-weight: 600; vertical-align: top; }
   tr + tr th, tr + tr td { border-top: 1px solid var(--bg); }
   a { color: var(--accent); }
+  .shots { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 8px; }
+  .shots figure { flex: 1 1 300px; min-width: 0; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 10px;
+               border: 1px solid var(--card); }
+  .shots figcaption { font-size: 0.8rem; color: var(--muted); text-align: center; margin-top: 6px; }
   footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--card); color: var(--muted); font-size: 0.85rem; }
 </style>
 </head>
@@ -46,6 +51,17 @@
 </header>
 
 <p>BadScore は、コートサイドの iPhone をスコアラーにするバドミントン用スコアボードアプリです。ポイントごとにスコアを読み上げ、ダブルタップでサーバーとレシーバーもコールします。</p>
+
+<div class="shots">
+  <figure>
+    <img src="img/board.png" alt="試合中のスコアボード画面" width="1200" height="552">
+    <figcaption>試合中のスコアボード</figcaption>
+  </figure>
+  <figure>
+    <img src="img/start.png" alt="スタート画面" width="1200" height="552">
+    <figcaption>スタート画面</figcaption>
+  </figure>
+</div>
 
 <h2>スコアボードの操作方法</h2>
 <table>
@@ -68,7 +84,10 @@
   <dd>A. プレイヤー編集画面の「Voice name」に、ひらがな等で読み方を入力してください。読み上げと一覧の並び順の両方に使われます。</dd>
 
   <dt>Q. 読み上げの声を変えたい</dt>
-  <dd>A. 設定画面の Voice で Female / Male を切り替えられます。隣のコートで同じアプリが使われているときの聞き分けにも便利です。より自然な声にしたい場合は、iOS の「設定 &gt; アクセシビリティ &gt; 読み上げ &gt; 声」から音声をダウンロードしてください。</dd>
+  <dd>A. 設定画面の Voice で Female / Male を切り替えられます。隣のコートで同じアプリが使われているときの聞き分けにも便利です。</dd>
+
+  <dt>Q. もっと自然な声で読み上げてほしい</dt>
+  <dd>A. iOS の仕様上、アプリが利用できる音声は iOS がアプリ向けに公開しているものに限られます。Siri の声や一部の高品質音声(日本語の Otoya など)は、iOS の設定画面からダウンロードできてもアプリからは利用できません。BadScore は利用可能な音声の中から最適なものを自動選択しています。なお、Siri 系以外の標準音声は「設定 &gt; アクセシビリティ &gt; 読み上げ &gt; 声」からダウンロードするとアプリにも反映されます(プレイヤー編集画面に、実際に使われる音声名が表示されます)。</dd>
 
   <dt>Q. 同じ名前のプレイヤーが登録できない</dt>
   <dd>A. プレイヤー名はアプリ内で一意です。同姓同名のメンバーは、ニックネームや番号付きなど区別できる名前で登録してください。</dd>
