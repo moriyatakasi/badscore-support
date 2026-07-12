@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BadScore サポート</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --fg: #1d1d1f;
+    --bg: #ffffff;
+    --muted: #6e6e73;
+    --accent: #6cb319;
+    --card: #f5f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg: #f5f5f7; --bg: #1d1d1f; --muted: #a1a1a6; --card: #2c2c2e; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: var(--fg); background: var(--bg);
+    line-height: 1.8;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 20px 60px; }
+  header { border-bottom: 4px solid var(--accent); padding: 28px 0 20px; margin-bottom: 28px; }
+  h1 { font-size: 1.9rem; }
+  h1 small { display: block; font-size: 0.95rem; font-weight: normal; color: var(--muted); margin-top: 4px; }
+  h2 { font-size: 1.25rem; margin: 36px 0 12px; padding-left: 10px; border-left: 4px solid var(--accent); }
+  p, ul, dl { margin-bottom: 12px; }
+  ul { padding-left: 1.4em; }
+  dt { font-weight: 600; margin-top: 16px; }
+  dd { color: var(--muted); margin-left: 0; }
+  table { border-collapse: collapse; width: 100%; background: var(--card); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 14px; font-size: 0.95rem; }
+  th { width: 9em; font-weight: 600; vertical-align: top; }
+  tr + tr th, tr + tr td { border-top: 1px solid var(--bg); }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--card); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <h1>BadScore<small>バドミントン スコアボード — サポート</small></h1>
+</header>
+
+<p>BadScore は、コートサイドの iPhone をスコアラーにするバドミントン用スコアボードアプリです。ポイントごとにスコアを読み上げ、ダブルタップでサーバーとレシーバーもコールします。</p>
+
+<h2>スコアボードの操作方法</h2>
+<table>
+  <tr><th>上にスワイプ</th><td>そのサイドに加点(ページがめくれます)</td></tr>
+  <tr><th>下にスワイプ</th><td>直前のポイントを取り消し(直前に得点したサイドのパネルで)</td></tr>
+  <tr><th>ダブルタップ</th><td>スコアの読み上げ。ダブルスではサーバーとレシーバーの名前もコール</td></tr>
+  <tr><th>ピンチイン</th><td>試合を中断してスタート画面へ(確認ダイアログが出ます)</td></tr>
+  <tr><th>長押し</th><td>この操作ガイドを画面に表示</td></tr>
+</table>
+
+<h2>よくある質問</h2>
+<dl>
+  <dt>Q. 音声が読み上げられない</dt>
+  <dd>A. 設定画面(歯車)の Mute がオフになっているか、端末の音量をご確認ください。マナーモード中でも読み上げは再生される設計です。</dd>
+
+  <dt>Q. プレイヤー名が読み上げられない</dt>
+  <dd>A. 名前のコールはダブルスでのダブルタップ時のみ行われます(シングルスはサーバーが明確なため、スコアのみ読み上げます)。設定画面の「Announce player names」がオンになっているかもご確認ください。</dd>
+
+  <dt>Q. 名前の読み方(発音)がおかしい</dt>
+  <dd>A. プレイヤー編集画面の「Voice name」に、ひらがな等で読み方を入力してください。読み上げと一覧の並び順の両方に使われます。</dd>
+
+  <dt>Q. 読み上げの声を変えたい</dt>
+  <dd>A. 設定画面の Voice で Female / Male を切り替えられます。隣のコートで同じアプリが使われているときの聞き分けにも便利です。より自然な声にしたい場合は、iOS の「設定 &gt; アクセシビリティ &gt; 読み上げ &gt; 声」から音声をダウンロードしてください。</dd>
+
+  <dt>Q. 同じ名前のプレイヤーが登録できない</dt>
+  <dd>A. プレイヤー名はアプリ内で一意です。同姓同名のメンバーは、ニックネームや番号付きなど区別できる名前で登録してください。</dd>
+
+  <dt>Q. 試合履歴を書き出したい</dt>
+  <dd>A. 履歴画面右上の共有ボタンから、全履歴を CSV ファイルとして書き出せます(Excel などで開けます)。</dd>
+</dl>
+
+<h2>お問い合わせ</h2>
+<p>不具合のご報告やご要望は、X (Twitter) <a href="https://x.com/moriyant">@moriyant</a> までお寄せください。</p>
+
+<h2 id="privacy">プライバシーポリシー</h2>
+<p>BadScore は、ユーザーの個人情報およびいかなるデータも収集しません。</p>
+<ul>
+  <li>登録したプレイヤー名や試合履歴などのデータは、すべてお使いの端末内にのみ保存されます</li>
+  <li>アプリが外部にデータを送信することはありません(アプリはオフラインで動作します)</li>
+  <li>広告や解析(トラッキング)の仕組みを含みません</li>
+  <li>CSV エクスポートや共有は、ユーザー自身の操作によってのみ行われます</li>
+</ul>
+<p>制定日: 2026年7月13日</p>
+
+<footer>© 2026 Moriya Takasi</footer>
+</main>
+</body>
+</html>
